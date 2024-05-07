@@ -7,7 +7,7 @@ This Django Courses Management System is a web application that manages course d
 
 ## Three Architectural Approaches:
 
-### 1. Mixins (`Mixins_Views.py`)
+### 1. Mixins
 In the Mixins approach (`Mixins_Views.py`),  multiple mixin classes are used in combination with `generics.GenericAPIView` to build the API views. This approach provides great flexibility as it allows for mixing and matching different functionalities to create highly customized views without much standard code.
 
 - **CourseList**:
