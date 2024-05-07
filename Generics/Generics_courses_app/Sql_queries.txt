@@ -1,0 +1,32 @@
+SELECT * from "flightApp_passenger";
+
+INSERT INTO "flightApp_passenger" ("firstname", "lastname", "middlename", "email", "phone")
+VALUES ('John', 'Smith', 'Michael', 'jsmith@email.com', '(555) 555-1234'),
+       ('Jane', 'Doe', NULL, 'jdoe@email.com', '(555) 555-5678'),
+       ('David', 'Lee', NULL, 'dlee@email.com', '(555) 555-9012'),
+	   ('Sarah', 'Jones', NULL, 'sjones@email.com', '(555) 555-3456'),
+       ('Michael', 'Brown', NULL, 'mbrown@email.com', '(555) 555-7890');
+
+
+
+select * from "flightApp_reservation";
+
+INSERT INTO "flightApp_reservation" ("flight_id", "passenger_id")
+SELECT f."id", p."id"
+FROM "flightApp_flight" f
+INNER JOIN "flightApp_passenger" p ON f."flightNumber" = 'DL7890' AND p."email" = 'sjones@email.com'
+UNION ALL
+SELECT f."id", p."id"
+FROM "flightApp_flight" f
+INNER JOIN "flightApp_passenger" p ON f."flightNumber" = 'EK1357' AND p."email" = 'mbrown@email.com';
+
+INSERT INTO "flightApp_reservation" ("flight_id", "passenger_id")
+SELECT f."id", p."id"
+FROM "flightApp_flight" f
+INNER JOIN "flightApp_passenger" p ON f."flightNumber" = 'AA1234' AND p."email" = 'jsmith@email.com'
+UNION ALL
+SELECT f."id", p."id"
+FROM "flightApp_flight" f
+INNER JOIN "flightApp_passenger" p ON f."flightNumber" = 'UA5678' AND p."email" = 'jdoe@email.com';
+
+
