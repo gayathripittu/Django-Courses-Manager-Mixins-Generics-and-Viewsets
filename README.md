@@ -43,7 +43,7 @@ Each part of the system has its own endpoints:
 
 ### Mixins
 - **List/Create Courses**: `GET` and `POST` `/courses/`
-- **Retrieve/Update/Delete a Course**: GET, PUT, DELETE` `/courses/<id>/`
+- **Retrieve/Update/Delete a Course**: `GET, PUT, DELETE` `/courses/<id>/`
 
 
 ### Generics
