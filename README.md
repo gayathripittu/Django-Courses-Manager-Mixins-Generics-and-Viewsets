@@ -42,13 +42,13 @@ In the Viewsets approach (`Viewsets_Views.py`), the `ModelViewSet` is utilized, 
 Each part of the system has its own endpoints:
 
 ### Mixins
-- **List/Create Courses**: `GET` and 'POST` `/courses/`
+- **List/Create Courses**: `GET` and `POST` `/courses/`
 - **Retrieve/Update/Delete a Course**: GET, PUT, DELETE` `/courses/<id>/`
 
 
 ### Generics
-- **List/Create Courses**: `GET` and 'POST` `/courses/`
-- **Retrieve/Update/Delete a Course**: GET, PUT, DELETE` `/courses/<id>/`
+- **List/Create Courses**: `GET` and `POST` `/courses/`
+- **Retrieve/Update/Delete a Course**: `GET, PUT, DELETE` `/courses/<id>/`
 
 ### Viewsets
 - All CRUD operations: `/courses/` (with appropriate HTTP methods)
